@@ -21,3 +21,10 @@ def max_non_adjacent_sum(nums):
 
 def add(a, b):
     return a+b
+
+#Wondering if I can just save locally with ctrl+s and then push
+
+def subtract(a, b):
+    return a-b
+
+#interesting didnt update
