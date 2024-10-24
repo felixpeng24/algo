@@ -16,3 +16,8 @@ def max_non_adjacent_sum(nums):
         include = new_include  # Update include to new value
     
     return max(include, exclude)
+
+# testing the add and commit stuff rn
+
+def add(a, b):
+    return a+b
