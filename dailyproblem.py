@@ -28,3 +28,21 @@ def subtract(a, b):
     return a-b
 
 #interesting didnt update
+#alright guess i gotta do all three
+# git add, git commit -m "commit msg", git push origin main
+
+
+nums = [3,7,11,2]
+target = 9
+print(enumerate(nums))
+
+def twoSum(nums, target):
+    hashmap = {}
+    i = 0
+    for num in nums:
+        hashmap[num] = i
+        i += 1
+        if (target - num) in hashmap:
+            return [hashmap[target - num], hashmap[num]]
+
+print(twoSum(nums, target))
