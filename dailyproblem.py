@@ -90,3 +90,7 @@ def is_balanced(s):
     
     return not stack
 
+def f(x,y):
+    return x + 3*y
+
+print(f(y=x,x=y))
