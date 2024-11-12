@@ -46,3 +46,47 @@ def twoSum(nums, target):
             return [hashmap[target - num], hashmap[num]]
 
 print(twoSum(nums, target))
+
+# bracket map
+def for_bracket(s):
+    if s[0] == "}" or s[0] == "]" or s[0] == ")":
+        return False
+    open_bracket = 0
+    open_curly = 0
+    open_parens = 0
+"""    for bracket in s:
+        if bracket == "{":
+            open_bracket += 1
+        if bracket == "}":
+            
+        if bracket == "[":
+        if bracket == "]":
+        if bracket == "(":
+        if bracket == ")":
+    return """
+
+bracket_map = {')': '(', ']': '[', '}': '{'}
+
+""" def bracket(s):
+    stack = []
+    pairs = {"{":"}", "[":"]", "(":")"}
+    for char in s:
+        if char in pairs.keys():
+            stack += char
+        elif char in pairs.values(): """
+
+
+def is_balanced(s):
+    stack = []
+    bracket_map = {')': '(', ']': '[', '}': '{'}
+    
+    for char in s:
+        if char in bracket_map.values():
+            stack.append(char)
+        elif char in bracket_map:
+            if not stack or stack[-1] != bracket_map[char]:
+                return False
+            stack.pop()
+    
+    return not stack
+
