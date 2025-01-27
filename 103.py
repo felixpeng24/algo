@@ -25,5 +25,9 @@ def substring(s, d):
     for r in range(1, len(s)+1):
         while r-l > len(d) and l<r:
             l += 1
-        if substring(s[l:r],d):
+        if in_substring(s[l:r],d):
             return s[l:r]
+
+s = "figehaeci"
+d = {"a", "e", "i"}
+print(substring(s,d))
