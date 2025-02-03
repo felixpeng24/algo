@@ -5,4 +5,4 @@ Given an integer list where each number represents the number of hops you can ma
 For example, [2, 0, 1, 0] returns True while [1, 1, 0, 1] returns False.
 """
 
-
+# brute force solution? could ask more clarifying qs like if the numbers stack
