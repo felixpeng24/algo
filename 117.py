@@ -2,7 +2,7 @@
 Given a binary tree, return the level of the tree with minimum sum.
 117
 """
-
+from collections import deque
 class TreeNode:
     def __init__(self, value=0, left=None, right=None):
         self.value = value
@@ -16,7 +16,7 @@ def min_sum_level(root):
     if not root:
         return -1  # Return -1 if the tree is empty
     
-    queue = [root]
+    queue = deque([root])
     min_sum = float('inf')
     min_level = 0
     level = 0
