@@ -31,4 +31,18 @@ def generate_subsets(s, index=0, current=""):
     generate_subsets(s, index + 1, current + s[index])
 
 # Example usage
-generate_subsets("abc")
+
+def iteration_subsets(s):
+    subsets = [""]
+
+    for letter in s:
+        new_subset = []
+        for subset in subsets:
+            new_subset.append(subset + letter)
+        
+        subsets.extend(new_subset)
+    
+    print(subsets)
+
+iteration_subsets("abcd")
+
