@@ -56,3 +56,44 @@ def levelOrder(root):
         level_result = []
         getLevel(root, level, level_result)
         final.append(level_result)
+
+
+
+
+
+
+# lets try this prob agaib
+
+"""
+Given the root of a binary tree, return the level order traversal of its nodes' 
+values. (i.e., from left to right, level by level).
+
+# Input: root = [3,9,20,null,null,15,7]
+# Output: [[3],[9,20],[null, null, 15,7]]
+
+"""
+
+# we can implement ez using bfs, but what if we dont want to use another data structure
+
+#i remember we did need height of tree, so lets grab that rq
+
+def height(node):
+    if not node:
+        return 0
+    
+    return 1+max(node.left, node.right)
+
+def treeTraverse(node):
+    h = height(node)
+    res = []
+
+    def dfs(level, node):
+        if not node:
+            return None
+        return [dfs(level-1, node.left), dfs(level-1, node.right)]
+    for level in range(h+1):
+        currLevel = []
+        for _ in 
+
+
+        res.append(currLevel)
