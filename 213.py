@@ -70,5 +70,14 @@ print(IPcombo("1111"))
 print(IPcombo("101023"))
 # Expected: ['1.0.10.23', '1.0.102.3', '10.1.0.23', '10.10.2.3', '101.0.2.3']
 
+print(IPcombo("123"))
+# Expected: [] — too few digits for 4 segments
+
+print(IPcombo("256256256256"))
+# Expected: [] — segments > 255
+
+print(IPcombo("010010"))
+# Expected: ['0.10.0.10', '0.100.1.0']
+
 
 
