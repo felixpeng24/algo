@@ -6,4 +6,5 @@ sum of unique powers of 7. The first few sevenish numbers are 1, 7, 8, 49, and s
 
  Create an algorithm to find the nth sevenish number.
 
+ easy
 """
