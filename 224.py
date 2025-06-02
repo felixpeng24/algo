@@ -16,3 +16,16 @@ easy
 #we have numSet to have all the sums we can make, and start with 1. add to set. now look at 2. add to set, and add to 1 to get three which we add to the set. repeat with 3...etc. am i going in the right direction
 
 #what if multiple holes? cant make 7 but can make 8 and the next number is 8 or smthg
+
+def subSetSum(nums):
+    smallUnreachable = 1
+    for num in nums:
+        if smallUnreachable < num:
+            return smallUnreachable
+        elif smallUnreachable >= num:
+            smallUnreachable += num
+
+    return smallUnreachable
+
+print(subSetSum([1, 2, 3, 10]))
+    
