@@ -26,7 +26,7 @@ continue
 """
 
 def minSteps(nums):
-    dp = [0] * (len(nums) - 1)
+    dp = [float('inf')] * (len(nums) - 1)
     for i in range(len(nums)-2, -1, -1): #start at 2, go backwards
         # goal = len(nums) = 10
         # current step = i + 1
@@ -35,5 +35,11 @@ def minSteps(nums):
             dp[i] = 1
         else:
             if nums[i] == 0:
-                dp[i] = float('inf')
+                continue
             for k in range(1, nums[i]+1):
+                dp[i] = min(dp[i], 1 + dp[i+k])
+    
+    return dp[0]
+
+nums = [6, 2, 4, 0, 5, 1, 1, 4, 2, 9]
+print(minSteps(nums))
