@@ -5,3 +5,6 @@ becomes [3, 4, 5, 6, 1, 2]. Try solving this without creating a copy of the list
 """
 
 #rotate using extra lit and combining, or by double reverse
+
+#double reverse
+
