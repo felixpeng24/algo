@@ -19,3 +19,23 @@ For the input above, the answer would be 2, as drinks 1 and 5 will satisfy every
 #dp?
 #or heuristic it by summing up frequency? greedy
 #greedy it is
+
+def greedy_min_drinks(preferences):
+    uncovered = set(preferences.keys())
+    drink_map = {}
+    for c, ds in preferences.items():
+        for d in ds:
+            drink_map.setdefault(d, set()).add(c)
+
+    chosen = []
+    while uncovered:
+        # pick drink that covers the most uncovered customers
+        d, covered = max(
+            ((d, cov & uncovered) for d, cov in drink_map.items()),
+            key=lambda x: len(x[1])
+        )
+        if not covered:
+            return None  # impossible to satisfy all customers
+        chosen.append(d)
+        uncovered -= covered
+    return chosen
