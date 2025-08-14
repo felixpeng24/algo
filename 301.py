@@ -1,0 +1,15 @@
+"""
+Implement a data structure which carries out the following operations without resizing the underlying array:
+
+add(value): Add a value to the set of values.
+check(value): Check whether a value is in the set.
+The check method may return occasional false positives (in other words, incorrectly identifying an element as part of the set), but should always correctly identify a true element.
+
+"""
+
+#wtf
+#bloom filter hash function
+
+# fixed array of bits, add(value) hashs the value and turns all the bits it refers to on
+# check value checks if the bits are on
+#if there is 0, def nto there, but if all are 1s, probably yes
